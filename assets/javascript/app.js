@@ -21,27 +21,27 @@ var config = {
       // YOUR TASK!!!
 
       // Code in the logic for storing and retrieving the most recent user.
-      var name = $(this).attr("name-input");
-      var email = $(this).attr("email-input");
-      var age = $(this).attr("age-input");
-      var comment = $(this).attr("comment-input");
+      var employeeName = $(this).attr("employeeName");
+      var role = $(this).attr("role");
+      var startDate = $(this).attr("startDate");
+      var monthlyRate = $(this).attr("monthlyRate");
 
-      database.ref().push({ //set method is what saves the data in the database variable, ref() references to the root since () is empty; .set saves at the root of the database
-        name: name,
-        email: email,
-        age: age,
-        comment: comment 
-      });
-      
+    database.ref().push({
+    employeeName: employeeName,
+    role: role,
+    startDate: startDate,
+    monthlyRate: monthlyRate,
+    dateAdded: firebase.database.ServerValue.TIMESTAMP
+  });
+
       // Don't forget to handle the "initial load"
-      $("#name-display").html(name);
-      $("#email-display").html(email);
-      $("#age-display").html(age);
-      $("#comment-display").html(comment);
+      $("#employeeName-display").html(name);
+      $("#role-display").html(email);
+      $("#startDate-display").html(age);
+      $("#monthlyRate-display").html(comment);
 
 
     });
-
 
     // Create Firebase "watcher" Hint: .on("value")
     database.ref().on("value", function(snapshot) { //value event: when the value changes, the event is going to run
