@@ -63,3 +63,25 @@ var config = {
     function(errorObject) {
       console.log("The read failed: " + errorObject.code);
     });
+
+
+    // Create Firebase "watcher" Hint: .on("value")
+    database.ref().on("value", function(snapshot) { //value event: when the value changes, the event is going to run
+      console.log(snapshot.val()); //this will log the entire object
+      
+      var name = snapshot.val().name;
+      var email = snapshot.val().email;
+      var age = snapshot.val().age;
+      var comment = snapshot.val().comment;
+      
+      $("#name-display").html(name);
+      $("#email-display").html(email);
+      $("#age-display").html(age);
+      $("#comment-display").html(comment);
+
+    }, 
+
+    // Create Error Handling
+    function(errorObject) {
+      console.log("The read failed: " + errorObject.code);
+    });
