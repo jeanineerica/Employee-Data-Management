@@ -96,57 +96,83 @@ File Created July 26, 2017 07:00PM
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
+    <script type=“text/javascript” href=“assets/javascript/app.js”></script>
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
   <div class="container">
+    
     <div class="jumbotron">
     <h1>Employee Data Management</h1>
     <p>A comprehensive...</p>
     </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading">Current Employees</div>
-          <div class="panel-body">
-            <table class="table table-hover">
-                <thead>
-                  <tr>
-                    <th>Employee Name</th>
-                    <th>Role</th>
-                    <th>Start Date</th>
-                    <th>Months Worked</th>
-                    <th>Monthly Rate ($)</th>
-                    <th>Total Billed ($)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>John Doe</td>
-                    <td>CEO</td>
-                    <td>07/01/2016</td>
-                    <td>12</td>
-                    <td>9000</td>
-                    <td>108000</td>
-                  </tr>
-                  <tr>
-                    <td>Jane Doe</td>
-                    <td>VP</td>
-                    <td>08/01/2016</td>
-                    <td>11</td>
-                    <td>8000</td>
-                    <td>88000</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-         <div class="panel panel-default">
-          <div class="panel-heading">Panel Heading</div>
-          <div class="panel-body">Panel Content</div>
-        </div>
-</div>
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">Current Employees</div>
+      <div class="panel-body">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Employee Name</th>
+              <th>Role</th>
+              <th>Start Date</th>
+              <th>Months Worked</th>
+              <th>Monthly Rate ($)</th>
+              <th>Total Billed ($)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Doe</td>
+              <td>CEO</td>
+              <td>07/01/2016</td>
+              <td>12</td>
+              <td>9000</td>
+              <td>108000</td>
+            </tr>
+            <tr>
+              <td>Jane Doe</td>
+              <td>VP</td>
+              <td>08/01/2016</td>
+              <td>11</td>
+              <td>8000</td>
+              <td>88000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">Add Employee</div>
+      <div class="panel-body">
+        <form>
+          <div class="input-group">
+            <span class="input-group-addon">Employee Name</span>
+            <input id="empName" type="text" class="form-control" name="empName" placeholder="John Doe">
+          </div>
+          <br />
+          <div class="input-group">  
+            <span class="input-group-addon">Role</span>
+            <input id="empRole" type="text" class="form-control" name="empRole" placeholder="CEO">
+          </div>
+          <br />
+          <div class="input-group">  
+            <span class="input-group-addon">Start Date</span>
+            <input id="empStartDate" type="text" class="form-control" name="empStartDate" placeholder="11/01/2001">
+          </div>
+          <br />
+          <div class="input-group">  
+            <span class="input-group-addon">Monthly Rate</span>
+            <input id="empRate" type="text" class="form-control" name="empRate" placeholder="9000">
+          </div>
+          <br />
+          <button type="submit" id="empSubmit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
